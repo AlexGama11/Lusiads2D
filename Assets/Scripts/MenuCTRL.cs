@@ -27,6 +27,7 @@ public class MenuCTRL : MonoBehaviour
 	{
 		// This line will trigger scene manager to load the first level.
 		        SceneManager.LoadScene(LevelOne);
+				Time.timeScale = 1;
 	}
 	
 	public void BackToMain()
