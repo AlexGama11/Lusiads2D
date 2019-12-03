@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1914,8 +1914,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 136.8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 144.7}
+  m_SizeDelta: {x: 404.3, y: 75.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1784668366
 MonoBehaviour:
@@ -1950,7 +1950,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Welcome!
+  m_Text: 'The Lusiads 2D
+
+    E-Sports Demo
+
+    December 2019'
 --- !u!222 &1784668367
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -20,5 +20,12 @@ public class LevelControl : MonoBehaviour
 	{
 	 	Application.Quit();
 	}
+	
+	public void Play()
+	{
+		// This line will trigger scene manager to load the first level.
+		        SceneManager.LoadScene(LevelOne);
+				Time.timeScale = 1;
+	}
 }
 	
