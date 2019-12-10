@@ -15,12 +15,12 @@ public class PlayerMovement : MonoBehaviour
     public float minHeight;
     public int Health = 3;
     private float targetTime = 0.0f;
-    public Animator camAnim;
 	public Text healthDisplay;
 	public GameObject effect;
 	public GameObject GameOver;
 	public GameObject spawner;
 	private GameObject Enemy;
+	public Animator camAnim;
    
    private void Start()
    {
@@ -51,14 +51,14 @@ public class PlayerMovement : MonoBehaviour
  
  if(Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxHeight)
             {
-                camAnim.SetTrigger("shake");
+			    camAnim.SetTrigger("shake");
                 Instantiate(effect, transform.position, Quaternion.identity);
                 playerPos = new Vector2(transform.position.x, transform.position.y + moveYaxis);
             }
    
    else if(Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minHeight)
             {
-                camAnim.SetTrigger("shake");
+			    camAnim.SetTrigger("shake");
                 Instantiate(effect, transform.position, Quaternion.identity);
                 playerPos = new Vector2(transform.position.x, transform.position.y - moveYaxis);
             }
