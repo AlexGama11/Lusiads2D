@@ -13,14 +13,18 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float maxHeight;
     public float minHeight;
-    public int Health = 3;
+    public int health = 3;
     private float targetTime = 0.0f;
-	public Text healthDisplay;
 	public GameObject effect;
 	public GameObject GameOver;
 	public GameObject spawner;
 	private GameObject Enemy;
 	public Animator camAnim;
+	public int numOfhearts;
+	
+	public Image[] hearts;
+	public Sprite fullheart;
+	public Sprite emptyheart;
    
    private void Start()
    {
@@ -30,8 +34,32 @@ public class PlayerMovement : MonoBehaviour
    {
    
    targetTime += Time.deltaTime;
+    if (health > numOfhearts)
+		{
+		health = numOfhearts;
+		}
+		
+	    for (int i = 0; i < hearts.Length; i++)
+		{
+		
+		 if (i < health)
+		 {
+		 hearts[i].sprite = fullheart;
+		 }
+		 else
+		 {
+		 hearts[i].sprite = emptyheart;
+		 }
+		 if (i < numOfhearts)
+		 {
+		  hearts[i].enabled = true;
+		 }
+		 else 
+		 {
+		 hearts[i].enabled = false;
+		 }
         
-       if (Health <= 0)
+       if (health <= 0)
 
 	   {
 	   
@@ -41,8 +69,6 @@ public class PlayerMovement : MonoBehaviour
 		   Destroy(gameObject);
 		   Destroy(Enemy);
 	   }
-	   
-	   healthDisplay.text = Health.ToString();
 		  
     transform.position = Vector2.MoveTowards(transform.position, playerPos,speed*Time.deltaTime);
 	
@@ -65,5 +91,6 @@ public class PlayerMovement : MonoBehaviour
    
 }
    
+}
 }
 }

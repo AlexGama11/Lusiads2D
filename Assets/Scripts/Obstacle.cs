@@ -14,7 +14,7 @@ public class Obstacle : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerMovement>().Health--;
+            other.GetComponent<PlayerMovement>().health--;
 			other.GetComponent<PlayerMovement>().camAnim.SetTrigger("shake");
             Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);

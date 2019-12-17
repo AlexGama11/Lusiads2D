@@ -16,7 +16,7 @@ private void Update()
 {
     scoreDisplay.text = score.ToString();
 	scoreDisplayOver.text = score.ToString();
-	if (score >= 100)
+	if (score >= 250)
 
 	   {
 	   NextLevel.SetActive(true);
