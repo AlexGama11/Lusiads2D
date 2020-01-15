@@ -13,7 +13,7 @@ public class RepeatingBG : MonoBehaviour
 
         if (transform.position.x <= endX)
         {
-            Vector2 pos = new Vector2(startX, transform.position.y);
+            Vector2 pos = new Vector2(startX, 0);
             transform.position = pos;
         }
     }

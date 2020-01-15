@@ -11,12 +11,13 @@ public Text scoreDisplay;
 public Text scoreDisplayOver;
 public string LevelOne;
 public GameObject NextLevel;
+public int Maxscore;
 
 private void Update()
 {
     scoreDisplay.text = score.ToString();
 	scoreDisplayOver.text = score.ToString();
-	if (score >= 250)
+	if (score >= Maxscore)
 
 	   {
 	   NextLevel.SetActive(true);
